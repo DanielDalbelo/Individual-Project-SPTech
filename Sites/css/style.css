@@ -1,0 +1,330 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(30,30,30);
+}
+
+.div_mom {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  width: 100%;
+  display: fixed;
+  padding: 15px 0 15px 0;
+  background: rgb(20,20,20);
+  margin: 0 0 10px 0;
+}
+
+.div_nav_page > a {
+  color: white;
+  text-decoration: none;
+  border-radius: 22px;
+  padding: 5px;
+}
+
+.div_nav_page > a:hover {
+  transition: .25s;
+  background: rgb(56,130,209);
+  color: white;
+}
+
+.div_nav_page {
+  background-color: #111;
+}
+
+.div_nav_content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.marginright {
+  margin: 0 50px 0 0;
+}
+
+.div_nav_popular_games {
+  display: flex;
+}
+
+.div_nav_onu {
+  display: flex;
+}
+
+.div_nav_page {
+  display: flex;
+  margin: 0 350px 0 20px;
+  border-radius: 22px;
+  padding: 0 10px 0 10px;
+  align-items: center;
+}
+
+.div_nav_login {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 20px 0 0;
+  align-items: center;
+}
+
+.div_nav_singup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.div_nav_donation {
+  display: flex;
+  margin: 0 20px 0 10px;
+}
+
+.centralization {
+  text-align: center;
+}
+
+/* donation button configuration */
+
+@media (hover: hover) {
+  #creditcard {
+    transform: translateY(110px);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  #money {
+    transform: translateY(180px);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .btnwallet button:hover #creditcard {
+    transform: translateY(0px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .btnwallet button:hover #money {
+    transform: translateY(30px);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.btnwallet .button:hover .btnwallet .button__text {
+  transition: transform .2s ease-in-out;
+}
+
+.btnwallet .button {
+  transition: .2s;
+  border: none;
+  outline: none;
+  background-color: purple;
+  padding: 5px 50px 5px 0px;
+  position: relative;
+  border-radius: 8px;
+  letter-spacing: 0.7px;
+  background-color: #5086bd;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+}
+
+.btnwallet .button__svg {
+  position: absolute;
+  overflow: visible;
+  bottom: 6px;
+  right: 0.2rem;
+  height: 140%;
+}
+
+.button:active {
+  transition: .2s;
+  background-color: #5066bd;
+}
+
+
+/* end */
+
+
+/* login and singup button's configuration, also some nav content decoration */
+
+.button_login {
+  width: 100px;
+  height: 50px;
+}
+
+.button_singup {
+  width: 100px;
+  height: 50px;
+}
+
+.glow-on-hover {
+  /* width: 100px;
+  height: 50px; */
+  border: none;
+  outline: none;
+  color: 
+#fff;
+  background: 
+#111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: 
+#000
+}
+
+.glow-on-hover:active:after {
+  background: 
+transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+#111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* end */
+
+
+/* Carroussel */
+
+/* Slideshow container */
+.slideshow-container {
+  width: 95vw;
+  height: 400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Slideshow img's */
+.slideshow-img {
+  height: 700px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 12%;
+  padding: 16px;
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.counterstrike-desc {
+  display: flex;
+  color: black;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 0px 100px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: start;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  transition: 2s;
+  /* animation-name: teste;
+  animation-duration: 1.5s; */
+}
+
+/* @keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes teste {
+  from {}
+} */
+
+/* end */

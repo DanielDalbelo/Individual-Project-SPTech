@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoySense System | Login</title>
+    <link rel="stylesheet" href="css/global-style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+    <div class="cadastro-box">
+        <h1>Cadastro</h1>
+        <form id="form_cadastrar" action="/cadastro" method="POST">
+            <div class="row">
+                <div class="col">
+                    <label>Usuário:</label>
+                    <input class="adjust" id="input_usuario" type="text" required placeholder="Insira o usuário">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Email:</label>
+                    <input id="input_email" type="email" required placeholder="Insira o email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Senha:</label>
+                    <input id="input_senha" type="password" required placeholder="Insira uma senha">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Confirme a senha:</label>
+                    <input id="input_confirmacao_senha" name="confirmacaoSenha" type="password" required
+                        placeholder="Insira a senha novamente">
+                </div>
+            </div>
+            <div class="row">
+                <button onclick="Cadastrar()" type="button">Cadastrar-se</button>
+            </div>
+        </form>
+    </div>
+    <div id="modalErro" class="modal">
+        <div class="modal-content" id="modalContent">
+            <div class="header-modal-erro">
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/box-important--v1.png"
+                    alt="box-important--v1" />
+            </div>
+            <div class="modal-erros" id="modal_erros">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modalCorreto" class="modal">
+        <div class="modal-content" id="modalContent">
+            <div class="header-modal-correto">
+                <img width="50" height="50"
+                    src="https://img.icons8.com/glyph-neue/64/FFFFFF/tiktok-verified-account.png"
+                    alt="tiktok-verified-account" />
+            </div>
+            <div class="modal-corretos" id="modal_corretos">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function Cadastrar() {
+
+        const usuario = input_usuario.value
+        const representaFazenda = select_representa_fazenda.value;
+        const email = input_email.value
+        const senha = input_senha.value
+        const confirmacaoSenha = input_confirmacao_senha.value
+        const fazenda = select_representa_fazenda.value
+        let contemNumero = false;
+        let senhaAutorizada = false;
+        let listaErro = ``;
+        let contemErro = false;
+
+
+
+        if (usuario != "" && email != "" && senha != "" && confirmacaoSenha != "" && fazenda != '#') {
+
+            if (representaFazenda == '') {
+                listaErro += `<p><span><span style="color: red;">&bull;&nbsp;</span>O representante deve representar alguma fazenda!</p>`
+                contemErro = true;
+            }
+
+            if (usuario.length < 3 || usuario.length > 25) {
+                listaErro += `<p><span><span style="color: red;">&bull;&nbsp;</span>Digite um nome válido, entre 3-25 caracteres</p>`
+                contemErro = true;
+            }
+
+            if (email.indexOf('@') <= 0 || email.indexOf('.') <= 0) {
+                listaErro += `<p ><span style="color: red;">&bull;&nbsp;</span>O endereço de Email é invalido!</p>`
+                contemErro = true;
+
+            }
+
+            if (senha.length >= 8 && senha.length <= 16) {
+
+                for (let i = 1; i <= senha.length; i++) {
+                    if (!isNaN(parseInt(senha[i]))) {
+                        contemNumero = true;
+                        break;
+                    }
+                }
+
+                if (contemNumero) {
+                    if (senha != confirmacaoSenha) {
+                        listaErro += `<p ><span style="color: red;">&bull;&nbsp;</span>As senhas não se combinam!</p>`
+                        contemErro = true
+                    }
+                } else {
+                    listaErro += `<p ><span style="color: red;">&bull;&nbsp;</span>Sua senha deve possuir pelo menos 1 caracter numérico!</p>`
+                    contemErro = true
+                }
+            } else {
+
+                listaErro += `<p ><span style="color: red;">&bull;&nbsp;</span>Digite uma senha entre 8-16 caracteres</p>`
+                contemErro = true
+
+            }
+        } else {
+            contemErro = true;
+            listaErro += `<p ><span style="color: red;">&bull;&nbsp;</span>Preencha todos os campos</p>`
+        }
+
+        if (contemErro == true) {
+            modal_erros.innerHTML = listaErro;
+
+            modalErro.style.display = 'flex';
+
+            modalErro.addEventListener('click', () => {
+                modalErro.style.display = 'none'
+            })
+
+            setTimeout(function () {
+                modalErro.style.display = 'none';
+            }, 5000);
+
+
+        } else {
+
+            modal_corretos.innerHTML = `<p><span style="color: green;">&bull;&nbsp;</span>O <span style="color: green;">${usuario}</span> foi cadastrado com sucesso!</p>`
+
+            modalCorreto.style.display = 'flex';
+
+
+
+
+            setTimeout(function () {
+                modalCorreto.style.display = 'none';
+            }, 1800);
+
+            form_cadastrar.reset();
+        }
+    }
+
+
+</script>
