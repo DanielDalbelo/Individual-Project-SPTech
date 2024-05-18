@@ -13,7 +13,7 @@
     <nav>
       <div class="div_nav_content">
         <div class="div_nav_page">
-          <a href="/populargames" class="div_nav_popular_games marginright centralization glow-on-hover">
+          <a href="#populargames" class="div_nav_popular_games marginright centralization glow-on-hover">
             Jogos recomendados
           </a>
           <a href="/wishlist" class="div_nav_wishlist marginright centralization glow-on-hover">
@@ -89,12 +89,12 @@
     </nav>
 
 
-    <div class="slideshow-container">
+    <div class="slideshow-container" id="populargames">
 
       <div class="mySlides fade">
         <div class="numbertext"></div>
         <img class="slideshow-img" src="img/counterstrike.webp" style="width:100%">
-        <ul class="counterstrike-desc">
+        <ul class="counterstrike-desc global-desc">
           <li>FPS</li>
           <li>Competitivo</li>
           <li>Multiplayer</li>
@@ -104,13 +104,21 @@
       <div class="mySlides fade">
         <div class="numbertext"></div>
         <img class="slideshow-img" src="img/deadbydaylight.jpg" style="width:100%">
-        <div class="text"></div>
+        <ul class="deadbydaylight-desc global-desc">
+          <li>Terror</li>
+          <li>Sobrevivência</li>
+          <li>Multiplayer</li>
+        </ul>
       </div>
 
       <div class="mySlides fade">
         <div class="numbertext"></div>
         <img class="slideshow-img" src="img/undertale.png" style="width:100%">
-        <div class="text"></div>
+        <ul class="undertale-desc global-desc">
+          <li>RPG</li>
+          <li>Indie</li>
+          <li>Singleplayer</li>
+        </ul>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
