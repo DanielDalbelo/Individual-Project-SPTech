@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -14,11 +17,13 @@ body {
 }
 
 nav {
-  width: 100%;
   display: fixed;
   padding: 15px 0 15px 0;
   background: rgb(20,20,20);
   margin: 0 0 10px 0;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .div_nav_page > a {
@@ -28,19 +33,8 @@ nav {
   padding: 5px;
 }
 
-.div_nav_page > a:hover {
-  transition: .25s;
-  background: rgb(56,130,209);
-  color: white;
-}
-
-.div_nav_page {
-  background-color: #111;
-}
-
 .div_nav_content {
   display: flex;
-  justify-content: flex-start;
 }
 
 .marginright {
@@ -56,11 +50,19 @@ nav {
 }
 
 .div_nav_page {
+  background-color: #111;
   display: flex;
-  margin: 0 350px 0 20px;
+  margin: 0 auto 0 20px;
   border-radius: 22px;
   padding: 0 10px 0 10px;
   align-items: center;
+  flex-direction: flex-start;
+}
+
+.div_nav_right {
+  display: flex;
+  flex-direction: flex-end;
+  margin: 0 10px 0 0;
 }
 
 .div_nav_login {
@@ -76,75 +78,12 @@ nav {
   align-items: center;
 }
 
-.div_nav_donation {
-  display: flex;
-  margin: 0 20px 0 10px;
-}
-
 .centralization {
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
-
-/* donation button configuration */
-
-@media (hover: hover) {
-  #creditcard {
-    transform: translateY(110px);
-    transition: transform 0.1s ease-in-out;
-  }
-
-  #money {
-    transform: translateY(180px);
-    transition: transform 0.1s ease-in-out;
-  }
-
-  .btnwallet button:hover #creditcard {
-    transform: translateY(0px);
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .btnwallet button:hover #money {
-    transform: translateY(30px);
-    transition: transform 0.3s ease-in-out;
-  }
-}
-
-.btnwallet .button:hover .btnwallet .button__text {
-  transition: transform .2s ease-in-out;
-}
-
-.btnwallet .button {
-  transition: .2s;
-  border: none;
-  outline: none;
-  background-color: purple;
-  padding: 5px 50px 5px 0px;
-  position: relative;
-  border-radius: 8px;
-  letter-spacing: 0.7px;
-  background-color: #5086bd;
-  color: #fff;
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
-  cursor: pointer;
-  box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
-}
-
-.btnwallet .button__svg {
-  position: absolute;
-  overflow: visible;
-  bottom: 6px;
-  right: 0.2rem;
-  height: 140%;
-}
-
-.button:active {
-  transition: .2s;
-  background-color: #5066bd;
-}
-
-
-/* end */
 
 
 /* login and singup button's configuration, also some nav content decoration */
@@ -160,14 +99,12 @@ nav {
 }
 
 .glow-on-hover {
-  /* width: 100px;
-  height: 50px; */
+  width: 115px;
+  height: 45px;
   border: none;
   outline: none;
-  color: 
-#fff;
-  background: 
-#111;
+  color: #fff;
+  background: #111;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -231,16 +168,18 @@ transparent;
 
 /* Slideshow container */
 .slideshow-container {
-  width: 90vw;
+  width: 80vw;
   height: 400px;
   position: relative;
   margin: auto;
+  padding: 0 0 300px 0;
 }
 
 /* Slideshow img's */
 .slideshow-img {
   height: 670px;
-  width:auto;
+  border-radius: 20px;
+  width: auto;
 }
 
 /* Hide the images by default */
@@ -254,7 +193,6 @@ transparent;
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: 12%;
   padding: 16px;
   color: blueviolet;
   font-weight: bold;
@@ -277,10 +215,10 @@ transparent;
 
 /* Caption text */
 
-@font-face {
+/* @font-face {
   font-family: deadbydaylightFont;
-  src: url(../font/MortifiedDrip.ttf);
-}
+  src: url(../font/);
+} */
 
 @font-face{
   font-family: counterstrikeFont;
@@ -292,11 +230,16 @@ transparent;
   src: url(../font/determination-extended.ttf);
 }
 
+@font-face{
+  font-family: minecraftFont;
+  src: url(../font/Minecraft.ttf);
+}
+
 .global-desc {
   display: flex;
   flex-direction: column;
   font-size: 30px;
-  margin: 230px 20px;
+  margin: 550px 20px;
   position: absolute;
   bottom: 8px;
   width: 100%;
@@ -309,8 +252,10 @@ transparent;
 }
 
 .deadbydaylight-desc {
-  color: red;
-  font-family: deadbydaylightFont;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: "Poppins", sans-serif;
 }
 
 .undertale-desc {
@@ -318,6 +263,49 @@ transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   font-family: undertaleFont;
+}
+
+.minecraft-desc {
+  color: gray;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: minecraftFont;
+}
+
+.iguinho-desc {
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+.add-cs-towishlist, .add-dbd-towishlist, .add-under-towishlist, .add-mine-towishlist, .add-igui-towishlist {
+  transition: 0.2s;
+  display: flex;
+  font-size: 30px;
+  margin: 515px 50px;
+  position: absolute;
+  bottom: 8px;
+  text-align: start;
+  -webkit-text-stroke: 1px red;
+  color: transparent;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer
+}
+
+.add-igui-towishlist {
+  -webkit-text-stroke-color: #000;
+}
+
+.fullhearth {
+  transition: 0.2s;
+  color:red;
+}
+
+.addtowishlist:hover {
+  transition: .2s;
+  font-size: 35px;
 }
 
 /* Number text (1/3 etc) */
@@ -329,35 +317,219 @@ transparent;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
 
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
+.fade{
   transition: 2s;
-  /* animation-name: teste;
-  animation-duration: 1.5s; */
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-/* @keyframes fade {
+ @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
 
-@keyframes teste {
-  from {}
-} */
+/* end */
+
+
+/* Wishlist */
+
+.wishlist {
+  transition: .5s;
+  width: 100%;
+  height: auto;
+  background: #002b7a;
+  padding: 0 -20px 0 20px;
+  position: relative;
+}
+
+/* end */
+
+
+/* community */
+
+.community {
+  width: 600px;
+}
+
+.comment {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: #002b7a;
+}
+.comment h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.comment p {
+  font-size: 14px;
+}
+
+.input-comment {
+  resize: none;
+  width: 490px;
+  height: 75px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 500;
+  font-size: .8vw;
+  color: #fff;
+  background-color: rgb(28,28,30);
+  box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 0.4vw;
+  transition: .4s;
+}
+
+.input-comment:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.input-comment:focus {
+  box-shadow: 0 0 0 .15vw skyblue;
+}
+
+.select-game {
+  height: 30px;
+  border-radius: 20px;
+  background-color: rgb(28,28,30);
+  color: white;
+  box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+  transition: .5s;
+}
+
+.select-game:hover {
+  background-color: rgb(50,50,50);
+  color: rgb(230,230,230);
+  transition: .5s;
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.select-button {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.comment-button {
+  border-radius: 20px;
+  background-color: rgb(28,28,30);
+  color: white;
+  box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+  transition: .5s;
+}
+
+.comment-button:hover {
+  background-color: rgb(50,50,50);
+  color: rgb(230,230,230);
+  transition: .5s;
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.div-community {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.community-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 10px 10px;
+  padding: 0 10px 0 10px;
+  background-color: #002b7a;
+  border: 1px solid #000;
+  align-items: center;
+  height: 520px;
+  border-radius: 20px;
+  align-content: center;
+  justify-content: center;
+}
+
+.div-community-img {
+  display: flex;
+  margin: 15px 10px 10px 10px;
+  background-color: #002bff;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.community-img {
+  border-radius: 20px;
+  margin: 0 5px 0 0;
+}
+
+.div-community-text {
+  display: flex;
+  max-width: 400px;
+  font-size: 40px;
+  margin: 15px 10px 10px 10px;
+  text-align: justify;
+}
+
+/* end */
+
+
+/* ONU */
+
+.onu {
+  display: flex;
+  margin: 100px 0 50px 0;
+}
+
+
+.onu-img{
+  display: flex;
+  max-width: 500px;
+  margin: 0 0 0 100px;
+  border-radius: 20px;
+}
+
+.div-img-onu {
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  margin: 0 50px 0 50px;
+}
+.img-onu41 {
+  margin-bottom: 50px;
+  border-radius: 20px;
+}
+
+.img-onu42 {
+  border-radius: 20px;
+}
+
+.onu-paragraph {
+  max-width: 500px;
+  height: 300px;
+  margin: 100px 0 0 20px;
+  font-size: 20px;
+  text-align: justify;
+  background-color: #002b7a;
+  border: 1px solid #000;
+  padding: 5px 5px 5px 5px;
+  border-radius: 20px;
+}
+
+/* end */
+
+
+/* Contact me */
+
+footer {
+  height: 200px;
+  width:100%;
+  color: white;
+  background-color: #141414;
+
+}
+
+
+
 
 /* end */
