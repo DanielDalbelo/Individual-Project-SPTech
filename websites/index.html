@@ -31,10 +31,14 @@
         </div>
         <div class="div_nav_right">
           <div class="div_nav_login">
-            <button id="button_login" class="button_login glow-on-hover">Login</button>
+            <a href="login.html">
+              <button id="button_login" class="button_login glow-on-hover">Login</button>
+            </a>
           </div>
           <div class="div_nav_singup">
-            <button id="button_singup" class="button_singup glow-on-hover">Cadastrar-se</button>
+            <a href="singup.html">
+              <button id="button_singup" class="button_singup glow-on-hover">Cadastrar-se</button>
+            </a>
           </div>
         </div>
       </div>
@@ -99,76 +103,114 @@
     </div>
     <br>
     <div class="wishlist" id="wishlist">
-      Sua lista de desejos:
-      <div class="wishlist-items" id="wishlist_items">
-        <b style="color: red">
-          Você ainda não adicionou nenhum jogo à sua lista de desejos
-        </b>
-      </div>
-    </div>
-
-    <div class="div-community">
-      <section id="community" class="community">
-        <div class="comment">
-          <h3>R.I.P. Sobre: Counter Strike 2</h3>
-          <p>O jogo é muito bom! Compre e teste</p>
-          <h3>Miau_FruFru Sobre: Dead by Daylight</h3>
-          <p>Tem alguns bugs e problemas de balanceamento, mas em geral o jogo é muito divertido, ainda mais com amigos!
-          </p>
-          <h3>Cpt.Digo Sobre: Undertale</h3>
-          <p>As músicas desse jogo são simplesmente incríveis assim como a sua história, as interações com personagens
-            são
-            bem profundas e todos os personagens são ótimos</p>
-          <h3>Philosophismo Sobre: Minecraft</h3>
-          <p>Esse jogo já é bom por sí próprio, mas ainda com a opção de adicionar mods, é simplesmente magnífico!</p>
-          <h3>DDN Sobre: Iguinho</h3>
-          <p>Minha infância fez parte desse jogo</p>
-          <textarea type="text" class="input-comment" id="input_comment" maxlength="200"
-            placeholder="Digite alguma coisa..."></textarea>
-          <div class="select-button">
-            <select id="select_game" class="select-game">
-              <option value="#">Selecione um jogo</option>
-              <option value="cs">Counter Strike 2</option>
-              <option value="dbd">Dead by Daylight</option>
-              <option value="under">Undertale</option>
-              <option value="mine">Minecraft</option>
-              <option value="igui">Iguinho</option>
-            </select>
-            <button class="comment-button" id="comment_button">Comentar</button>
-          </div>
-        </div>
-      </section>
-
-      <div class="community-container">
-        <div class="div-community-img">
-          <div class="div-community-text">
-            Aqui você pode ver avaliações feitas pela nossa comunidade sobre os jogos! Participe com a gente, deixe seu
-            comentário.
-          </div>
-          <img class="community-img" src="img/community.png" alt="our-community">
+      <div class="wishlist-content">
+        <h2 class="wishlist-title">Sua lista de desejos:</h2>
+        <div class="wishlist-games" id="wishlist_games">
+          <b style="color: red">
+            Você ainda não adicionou nenhum jogo à sua lista de desejos
+          </b>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="onu" class="onu">
+  <div class="div-community">
+    <section id="community" class="community">
+      <div class="comment">
+        <h3>R.I.P. Sobre: Counter Strike 2</h3>
+        <p>O jogo é muito bom! Compre e teste</p>
+        <h3>Miau_FruFru Sobre: Dead by Daylight</h3>
+        <p>Tem alguns bugs e problemas de balanceamento, mas em geral o jogo é muito divertido, ainda mais com amigos!
+        </p>
+        <h3>Cpt.Digo Sobre: Undertale</h3>
+        <p>As músicas desse jogo são simplesmente incríveis assim como a sua história, as interações com personagens
+          são
+          bem profundas e todos os personagens são ótimos</p>
+        <h3>Philosophismo Sobre: Minecraft</h3>
+        <p>Esse jogo já é bom por sí próprio, mas ainda com a opção de adicionar mods, é simplesmente magnífico!</p>
+        <h3>DDN Sobre: Iguinho</h3>
+        <p>Minha infância fez parte desse jogo</p>
+        <textarea type="text" class="input-comment" id="input_comment" maxlength="200"
+          placeholder="Digite alguma coisa..."></textarea>
+        <div class="select-button">
+          <input type="text" placeholder="Usuário" class="input-user">
+          <select id="select_game" class="select-game">
+            <option value="#">Selecione um jogo</option>
+            <option value="cs">Counter Strike 2</option>
+            <option value="dbd">Dead by Daylight</option>
+            <option value="under">Undertale</option>
+            <option value="mine">Minecraft</option>
+            <option value="igui">Iguinho</option>
+          </select>
+          <button class="comment-button" id="comment_button">Comentar</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="community-container">
+      <div class="div-community-img">
+        <div class="div-community-text">
+          Aqui você pode ver avaliações feitas pela nossa comunidade sobre os jogos! Participe com a gente, deixe seu
+          comentário.
+        </div>
+        <img class="community-img" src="img/community.png" alt="our-community">
+      </div>
+    </div>
+  </div>
+
+  <div id="onu" class="onu">
+    <a href="https://www.globalgoals.org/goals/4-quality-education/">
       <img src="img/onu4.webp" alt="onu-quality-education" id="onu_img" class="onu-img">
-      <div class="div-img-onu">
+    </a>
+    <div class="div-img-onu">
+      <a href="https://www.globalgoals.org/goals/4-quality-education/">
         <img src="img/onu4.1.svg" alt="onu-quality-education 4.1" class="img-onu41">
+      </a>
+      <a href="https://www.globalgoals.org/goals/4-quality-education/">
         <img src="img/onu4.2.svg" alt="onu-quality-education 4.2" class="img-onu42">
-      </div>
-      <p class="onu-paragraph">
-        Existem diversos jogos que garantem um aprendizado básico de maneira intuitiva e divertida, chamando o
-        interesse das pessoas e dando esse conhecimento para elas. Alguns exemplos são: <i>Minecraft Education</i>, que está
-        presente na metodologia de ensino de mais de <b>100 mil</b> escolas em 40 países no mundo todo, diversos jogos
-        infantis para o aprendizado de crianças, onde podem ser encontrados, por exemplo, no site "Iguinho", jogos com
-        materiais mais técnicos, como o <i>Flexbox Froggy</i> e o <i>Flexbox Zombies</i>, jogos que pedem mais racício
-        lógico, principalmente categorizados como quebra-cabeças, podendo ser xadrez, paciência, dama e muito mais!
-      </p>
+      </a>
     </div>
+    <p class="onu-paragraph">
+      Existem diversos jogos que garantem um aprendizado básico de maneira intuitiva e divertida, chamando o
+      interesse das pessoas e dando esse conhecimento para elas. Alguns exemplos são: <i>Minecraft Education</i>, que
+      está
+      presente na metodologia de ensino de mais de <b>100 mil</b> escolas em 40 países no mundo todo, diversos jogos
+      infantis para o aprendizado de crianças, onde podem ser encontrados, por exemplo, no site "Iguinho", jogos com
+      materiais mais técnicos, como o <i>Flexbox Froggy</i> e o <i>Flexbox Zombies</i>, jogos que pedem mais racício
+      lógico, principalmente categorizados como quebra-cabeças, podendo ser xadrez, paciência, dama e muito mais!
+    </p>
+  </div>
 
-    <footer id="footer">
-      Contatos:
-    </footer>
+  <footer id="footer">
+    <div class="div-footer-contact">
+      <h1 class="title-footer">Contatos:</h1>
+      <div class="outlook">
+        <img src="img/outlook.png" alt="outlook" class="img-footer-outlook">
+        <span>daniel.neves@sptech.school</span>
+      </div>
+      <div class="tel">
+        <img src="img/tel.png" alt="telephone" class="img-footer-tel">
+        <span>(11) 9 9270-8667</span>
+      </div>
+    </div>
+    <div class="div-references">
+      <h1>Importante:</h1>
+      <div class="div-onu">
+        <img src="img/onu.png" alt="onu" class="img-footer-onu">
+        <a
+          href="https://www.globalgoals.org/goals/4-quality-education/">https://www.globalgoals.org/goals/4-quality-education/</a>
+      </div>
+      <div class="div-steam">
+        <img src="img/steam.png" alt="steam" class="img-footer-steam">
+        <a href="https://store.steampowered.com/?l=portuguese">https://store.steampowered.com/?l=portuguese</a>
+      </div>
+      <div class="div-iguinho">
+        <img src="img/iguinho.png" alt="iguinho" class="img-footer-iguinho">
+        <a href="https://iguinho.com.br/">https://iguinho.com.br/</a>
+      </div>
+    </div>
+    </div>
+  </footer>
   </div>
   <script type="text/javascript" async src="js/mainjs.js"></script>
 </body>

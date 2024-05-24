@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoySense System | Login</title>
-    <link rel="stylesheet" href="css/global-style.css">
+    <title>Login</title>
     <link rel="stylesheet" href="css/login.style.css">
 </head>
 <body>
+    <span id="span_gif">
+    <img class="img-ryu" src="img/ryu.gif" alt="Ryu">
+    </span>
     <div class="login-box">
         <h1>Login</h1>
         <form action="/login" method="POST">
@@ -16,59 +18,22 @@
                 <div class="col">
                     <label>Usuário:</label>
                     <input name="usuario" type="text" id="input_username" required placeholder="XXXXXXXXXYY">
+                    <p style="color: white;" id="user_error"></p>
                 </div>
-                <!-- <div class="col">
-                    <label>&nbsp;</label>
-                    <select id="select_tipo">
-                        <option value="empresa">Empresa</option>
-                        <option value="funcionario">Funcionário</option>
-                    </select>
-                </div> -->
             </div>
             <div class="row">
                 <div class="col">
                     <label>Senha:</label>
                     <input name="senha" type="password" id="input_senha" required placeholder="********">
+                    <p style="color: white;" id="password_error"></p>
                 </div>
             </div>
             <div class="row">
-                <button onclick="chkLogin()" type="button">Entrar</button>
+                <button id="button_index" class="button-index" type="button">Voltar</button>
+                <button id="button_login" class="button-login" type="button">Entrar</button>
             </div>
         </form>
     </div>
 </body>
+<script src="js/login.js"></script>
 </html>
-
-<script>
-    function chkLogin()
-    {
-        const username = input_username.value; //Se for número, .length não funciona
-        // const tipoUser = select_tipo.value;
-        const senha = input_senha.value;
-
-        let usuarioVerificado = false;
-
-        if(username != '' && senha != '' ){
-
-            // if(tipoUser == 'empresa'){
-            //     if(username == 'sorriso' && senha == 'sorriso123'){
-            //         usuarioVerificado = true;
-            //     }else{
-            //         alert('Usuário ou senha incorretas. Tente novamente!')
-            //     }
-            // }else if(tipoUser == 'funcionario'){
-                if(username == 'fernanda' && senha == 'fe123'){
-                    usuarioVerificado = true;
-                }else{
-                    alert('Usuário ou senha incorretas. Tente novamente!')
-                }
-        }else{
-            alert('Preencha todos os campos!')
-        }
-
-        if(usuarioVerificado){
-            alert('Autenticado com sucesso!');
-            window.location.assign('dashboard.html');
-        }
-    }
-</script>

@@ -180,6 +180,7 @@ transparent;
   height: 670px;
   border-radius: 20px;
   width: auto;
+  margin-top: 100px;
 }
 
 /* Hide the images by default */
@@ -191,9 +192,9 @@ transparent;
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 60%;
   width: auto;
-  padding: 16px;
+  padding: 25px;
   color: blueviolet;
   font-weight: bold;
   font-size: 18px;
@@ -215,11 +216,6 @@ transparent;
 
 /* Caption text */
 
-/* @font-face {
-  font-family: deadbydaylightFont;
-  src: url(../font/);
-} */
-
 @font-face{
   font-family: counterstrikeFont;
   src: url(../font/Pervitina-Dex-FFP.ttf);
@@ -239,7 +235,7 @@ transparent;
   display: flex;
   flex-direction: column;
   font-size: 30px;
-  margin: 550px 20px;
+  margin: 450px 20px;
   position: absolute;
   bottom: 8px;
   width: 100%;
@@ -283,7 +279,7 @@ transparent;
   transition: 0.2s;
   display: flex;
   font-size: 30px;
-  margin: 515px 50px;
+  margin: 415px 50px;
   position: absolute;
   bottom: 8px;
   text-align: start;
@@ -335,13 +331,64 @@ transparent;
 /* Wishlist */
 
 .wishlist {
+  left: 32%;
   transition: .5s;
-  width: 100%;
-  height: auto;
+  width: 500px;
+  min-height: 600px;
   background: #002b7a;
-  padding: 0 -20px 0 20px;
   position: relative;
+  margin: 150px 0px 100px 0px;
+  border-radius: 20px;
+  border: 1px solid black;
 }
+
+.wishlist > p {
+  text-align: justify;  
+}
+
+.wishlist-content {
+  margin: 5px 5px 5px 5px;
+}
+
+.wishlist-title {
+  padding: 15px;
+}
+
+.wishlist-items {
+  margin: 5px 5px 5px 5px;
+}
+
+.wishlist-games {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wishlist-global-games {
+  transition: .2s;
+  display: flex;
+  max-width: 150px;
+  max-height: 100px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.wishlist-global-games:hover{
+  transition: .2s;
+  box-shadow: 1px 1px 5px 5px white;
+}
+
+.wishlist-global-games:active{
+  transition: .2s;
+  box-shadow: 1px 1px 5px 5px red;
+}
+
+.game-container {
+  display: flex;
+}
+
+
 
 /* end */
 
@@ -370,7 +417,7 @@ transparent;
   font-size: 14px;
 }
 
-.input-comment {
+.input-comment, .input-user {
   resize: none;
   width: 490px;
   height: 75px;
@@ -387,12 +434,17 @@ transparent;
   transition: .4s;
 }
 
-.input-comment:hover {
+.input-comment:hover, .input-user:hover {
   box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
 }
 
-.input-comment:focus {
+.input-comment:focus, .input-user:focus {
   box-shadow: 0 0 0 .15vw skyblue;
+}
+
+.input-user {
+  height: 20px;
+  width: 100px;
 }
 
 .select-game {
@@ -483,25 +535,59 @@ transparent;
 
 
 .onu-img{
+  transition: .2s;
   display: flex;
   max-width: 500px;
   margin: 0 0 0 100px;
   border-radius: 20px;
 }
 
-.div-img-onu {
+.onu-img:hover{
+  transition: .2s;
+  box-shadow: 2px 2px 10px 10px white;
+}
+
+.onu-img:active{
+  transition: .2s;
+  box-shadow: 2px 2px 10px 10px red;
+}
+
+.div-img-onu > a{
   display: flex;
   flex-direction: column;
   width: 225px;
   margin: 0 50px 0 50px;
 }
+
 .img-onu41 {
+  transition: .2s;
   margin-bottom: 50px;
   border-radius: 20px;
 }
 
+.img-onu41:hover{
+  transition: .2s;
+  box-shadow: 2px 2px 10px 10px white;
+}
+
+.img-onu41:active{
+  transition: .2s;
+  box-shadow: 2px 2px 10px 10px red;
+}
+
 .img-onu42 {
+  transition: .2s;
   border-radius: 20px;
+}
+
+.img-onu42:hover{
+  transition: .2s;
+  box-shadow: 2px 2px 10px 10px white;
+}
+
+.img-onu42:active{
+  transition: .2s;
+  box-shadow: 2px 2px 10px 10px red;
 }
 
 .onu-paragraph {
@@ -522,14 +608,76 @@ transparent;
 /* Contact me */
 
 footer {
+  display: flex;
   height: 200px;
-  width:100%;
+  width: 100%;
   color: white;
   background-color: #141414;
-
+  justify-content: space-evenly;
 }
 
+.title-footer {
+  margin: 10px 0 10px 10px;
+}
 
+.div-footer-contact {
+  display: flex;
+  flex-direction: column;
+}
 
+.outlook {
+  display: flex;
+  align-items: center;
+  padding: 0 0 20px 0;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+}
+
+.img-footer-outlook {
+  max-width: 50px;
+}
+
+.img-footer-tel {
+  max-width: 50px;
+}
+
+.div-onu {
+  display: flex;
+  align-items: center;
+}
+
+.img-footer-onu {
+  max-width: 25px;
+  padding: 0 5px 10px 0;
+}
+
+.div-references {
+  margin: -13px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.div-steam {
+  display: flex;
+  align-items: center;
+}
+
+.img-footer-steam {
+  max-width: 25px;
+  padding: 0 5px 10px 0;
+}
+
+.div-iguinho {
+  display: flex;
+  align-items: center;
+}
+
+.img-footer-iguinho {
+  max-width: 25px;
+  padding-right: 5px;
+}
 
 /* end */

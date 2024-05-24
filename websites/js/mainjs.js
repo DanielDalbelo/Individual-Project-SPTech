@@ -65,19 +65,7 @@ function addCstoWishlist() {
       }
     }
   }
-  firstWishedGame = wishlistGames[0];
-  if (wishlistLength >= 1 && firstWishedGame != undefined) {
-    wishlist_items.innerHTML = ``;
-    for (let positionlist = 0; positionlist < wishlistLength; positionlist++) {
-      if (wishlistGames[positionlist] == undefined) {
-
-      } else {
-        wishlist_items.innerHTML += `<br>${wishlistGames[positionlist]}`;
-      }
-    }
-  } else {
-    wishlist_items.innerHTML = `<b style="color: red">Você ainda não adicionou nenhum jogo à sua lista de desejos</b>`
-  }
+  forWishlist();
 }
 
 function addDbdtoWishlist() {
@@ -95,19 +83,7 @@ function addDbdtoWishlist() {
       }
     }
   }
-  firstWishedGame = wishlistGames[0];
-  if (wishlistLength >= 1 && firstWishedGame != undefined) {
-    wishlist_items.innerHTML = ``;
-    for (let positionlist = 0; positionlist < wishlistLength; positionlist++) {
-      if (wishlistGames[positionlist] == undefined) {
-
-      } else {
-        wishlist_items.innerHTML += `<br>${wishlistGames[positionlist]}`;
-      }
-    }
-  } else {
-    wishlist_items.innerHTML = `<b style="color: red">Você ainda não adicionou nenhum jogo à sua lista de desejos</b>`
-  }
+  forWishlist();
 }
 
 function addUndertoWishlist() {
@@ -125,19 +101,7 @@ function addUndertoWishlist() {
       }
     }
   }
-  firstWishedGame = wishlistGames[0];
-  if (wishlistLength >= 1 && firstWishedGame != undefined) {
-    wishlist_items.innerHTML = ``;
-    for (let positionlist = 0; positionlist < wishlistLength; positionlist++) {
-      if (wishlistGames[positionlist] == undefined) {
-
-      } else {
-        wishlist_items.innerHTML += `<br>${wishlistGames[positionlist]}`;
-      }
-    }
-  } else {
-    wishlist_items.innerHTML = `<b style="color: red">Você ainda não adicionou nenhum jogo à sua lista de desejos</b>`
-  }
+  forWishlist();
 }
 
 function addMinetoWishlist() {
@@ -155,19 +119,7 @@ function addMinetoWishlist() {
       }
     }
   }
-  firstWishedGame = wishlistGames[0];
-  if (wishlistLength >= 1 && firstWishedGame != undefined) {
-    wishlist_items.innerHTML = ``;
-    for (let positionlist = 0; positionlist < wishlistLength; positionlist++) {
-      if (wishlistGames[positionlist] == undefined) {
-
-      } else {
-        wishlist_items.innerHTML += `<br>${wishlistGames[positionlist]}`;
-      }
-    }
-  } else {
-    wishlist_items.innerHTML = `<b style="color: red">Você ainda não adicionou nenhum jogo à sua lista de desejos</b>`
-  }
+  forWishlist();
 }
 
 function addIguitoWishlist() {
@@ -185,20 +137,83 @@ function addIguitoWishlist() {
       }
     }
   }
+  forWishlist();
+  }
+
+function forWishlist(){
   firstWishedGame = wishlistGames[0];
   if (wishlistLength >= 1 && firstWishedGame != undefined) {
-    wishlist_items.innerHTML = ``;
+    wishlist_games.innerHTML = ``;
     for (let positionlist = 0; positionlist < wishlistLength; positionlist++) {
-      if (wishlistGames[positionlist] == undefined) {
-
-      } else {
-        wishlist_items.innerHTML += `<br>${wishlistGames[positionlist]}`;
+      if (!(wishlistGames[positionlist] == undefined)) {
+        wishlist_games.innerHTML += `${wishlistGames[positionlist]}`;
+      }
+      if (wishlistGames[positionlist] == 'Counter Strike 2') {
+        wishlist_games.innerHTML += `
+        <a href="https://store.steampowered.com/app/730/CounterStrike_2/">
+        <img src="img/counterstrike.webp" alt="Counter Strike 2" class="wishlist-global-games">
+        </a>
+        <p">
+        Counter-Strike 2, conhecido também como CS2 é um jogo tático multijogador de tiro em primeira 
+        pessoa anunciado 22 de março de 2023 e lançado em 27 de setembro de 2023. Desenvolvido e publicado 
+        pela Valve. É o quinto jogo da série principal Counter-Strike.
+        </p>
+        `
+      }
+      if (wishlistGames[positionlist] == 'Dead by Daylight') {
+        wishlist_games.innerHTML += `
+        <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/?l=portuguese">
+        <img src="img/deadbydaylight.jpg" alt="Dead by Daylight" class="wishlist-global-games">
+        </a>
+        <p>
+        Dead by Daylight é um jogo eletrônico multijogador online assimétrico do gênero survival horror 
+        desenvolvido pelo estúdio canadense Behaviour Interactive.
+        </p>
+        `
+      }
+      if (wishlistGames[positionlist] == 'Undertale') {
+        wishlist_games.innerHTML += `
+        <a href="https://store.steampowered.com/app/391540/Undertale/?l=portuguese">
+        <img src="img/undertale.png" alt="Undertale" class="wishlist-global-games">
+        </a>
+        <p>
+        Undertale é um RPG eletrônico criado pelo desenvolvedor independente norte-americano Toby Fox. 
+        Nele, o jogador pode controlar uma criança humana que caiu em uma caverna, uma região grande e 
+        isolada sob a superfície da Terra, separada por uma barreira mágica.
+        </p>
+        `
+      }
+      if (wishlistGames[positionlist] == 'Minecraft') {
+        wishlist_games.innerHTML += `
+        <a href="https://www.minecraft.net/pt-br">
+        <img src="img/minecraft.avif" alt="Minecraft" class="wishlist-global-games">
+        </a>
+        <p>
+        Minecraft é um jogo eletrônico sandbox de sobrevivência criado pelo desenvolvedor sueco 
+        Markus "Notch" Persson e posteriormente desenvolvido e publicado pela Mojang Studios, cuja 
+        propriedade intelectual foi obtida pela Microsoft em 2014.
+        </p>
+        `
+      }
+      if (wishlistGames[positionlist] == 'Iguinho') {
+        wishlist_games.innerHTML += `
+        <a href="https://iguinho.com.br/">
+        <img src="img/iguinhoGame.png" alt="Iguinho" class="wishlist-global-games">
+        </a>
+        <p>
+        Iguinho é um site que hospeda diversos jogos infantil, tanto educativos quanto de puro 
+        entreterimento criado por Camilo Brunelli, Carlos Baldim e César Figueiredo. Além de jogos
+        o site hospeda também quadrinhos e livros infantis desde 2007.
+        </p>
+        `
       }
     }
   } else {
-    wishlist_items.innerHTML = `<b style="color: red">Você ainda não adicionou nenhum jogo à sua lista de desejos</b>`
+    wishlist_games.innerHTML = `<b style="color: red">Você ainda não adicionou nenhum jogo à sua lista de desejos</b>`
   }
 }
+
+
 
 counterstrikeWishlistButton.addEventListener("click", addCstoWishlist);
 deadbydaylightWishlistButton.addEventListener("click", addDbdtoWishlist);
