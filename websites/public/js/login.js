@@ -2,10 +2,9 @@ const loginButton = document.querySelector("#button_login");
 const indexButton = document.querySelector("#button_index");
 
 function chkLogin() {
-    const loginBox = document.querySelector(".login-box");
     const username = input_username.value;
     const senha = input_senha.value;
-    let approved = false;
+    let approved = true;
 
 
     if (username == ''){

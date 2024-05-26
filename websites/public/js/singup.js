@@ -56,16 +56,20 @@ function singup() {
         unsuccessful();
     } else {
         div_errors.innerHTML = ``;
-        successful();
-        /*
 
+        fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nomeServer: user,
+        emailServer: email,
+        senhaServer: senha
+      }),
+    })
+    successful();
 
-
-        Adicionar a webdatavizaqui!!
-
-
-
-        */
     }
 }
 

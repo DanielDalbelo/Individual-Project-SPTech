@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Gráficos - Quiz</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="name">
+            Olá Daniel
+        </h1>
+        <div class='buttons'>
+            <button class="glow-on-hover" id="button_quiz">Quiz sobre jogos</button>
+            <button class="glow-on-hover" id="button_left">Sair</button>
+        </div>
+    </header>
+
+    <div class="kpis">
+        <div class="kpi">
+            <h1>Quantidade de tentativas no quiz</h1>
+            <p>5</p>
+        </div>
+        <div class="kpi">
+            <h1>Média de pontos</h1>
+            <p>70</p>
+        </div>
+        <div class="kpi">
+            <h1>Maior pontuação até agora</h1>
+            <p>100</p>
+        </div>
+        <div class="kpi">
+            <h1>Vezes que venceu</h1>
+            <p>1</p>
+        </div>
+    </div>
+
+
+
+    <div class="charts">
+            <canvas id="plays_chart" class="plays-chart"></canvas>
+            <canvas id="finalization_chart" class="finalization-chart"></canvas>
+    </div>
+
+</body>
+<script src="js/dashboard.js"></script>
+</html>

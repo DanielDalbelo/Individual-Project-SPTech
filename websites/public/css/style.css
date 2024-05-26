@@ -407,6 +407,7 @@ transparent;
   margin: 10px;
   border-radius: 20px;
   background-color: #002b7a;
+  align-content: center;
 }
 .comment h3 {
   font-size: 16px;
